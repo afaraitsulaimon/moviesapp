@@ -18,8 +18,8 @@ const Home = () => {
 
        
 
-        const moviesUrl = 'http://www.omdbapi.com/?i=tt3896198&plot=full&s=title&apikey=406e54e4';
-        const seriesUrl = 'http://www.omdbapi.com/?i=tt3896198&plot=full&s=series&apikey=406e54e4';
+        const moviesUrl = 'https://www.omdbapi.com/?i=tt3896198&plot=full&s=title&apikey=406e54e4';
+        const seriesUrl = 'https://www.omdbapi.com/?i=tt3896198&plot=full&s=series&apikey=406e54e4';
  
 
         // const url = 'http://www.omdbapi.com/?i=tt3896198&apikey=406e54e4';
@@ -36,7 +36,7 @@ const Home = () => {
     const handleSearch = async (e) => {
         setSearchText(e.target.value);
         
-        const urlSearch = `http://www.omdbapi.com/?i=tt3896198&plot=full&s=${searchText}&apikey=406e54e4`;
+        const urlSearch = `https://www.omdbapi.com/?i=tt3896198&plot=full&s=${searchText}&apikey=406e54e4`;
        axios.get(urlSearch).then((resp)=> setSearchedMovies(resp.data.Search)).catch((err) => console.log(err));
 
 // console.log(searchedMovies.length);
